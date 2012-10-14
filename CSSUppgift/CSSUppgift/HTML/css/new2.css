@@ -1,0 +1,248 @@
+
+/* reset css*/
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*----------------------------------------EGEN KOD--------------------------------------------------------------------------------------------------------------------------------------*/
+/*Fick tipset från en vän att köra en reset för att nollställa eventuella css regler webbläsare har.
+Denna reset är lite äldre pga av att vi inte använder css3 och jag inte vet om det skulle vara ok.
+Där fick jag också tipset om att dela upp typografi och layout, vilket jag tycker känns bra*/
+
+/* Typography --------------------------------------------------------------------------*/
+/** Börjar med allmänna värden,body, h, h2 och p, dessa påverkar allt inom body där inget annat anges, därefter listas specifika värden, samma upplägg i layout nedan*/
+body{        
+	font: 16px Helvetica, Arial, sans-serif; /*Jag har gjort typsnitts analyer på nätet och kommit fram till de olika typsnitt man använt*/
+}	                                         /* Här sätter jag storleken på grundtypsnittet vilka alla em värden beräknas från.*/
+
+
+h1, h2, h3{      
+		color: #A53C4D;                          /* Vinrödsaktigt färg till rubriker */
+}
+
+h1 {
+  /* font:  bold 1.2505em Verdana, Tahoma, sans-serif; /* h1 används i nuläget bara för att visa sidhuvud och logga med länk till startsidan */
+}                                                            
+
+h2 {
+	font:  bold 1.125em/1.5em Verdana, Tahoma, sans-serif;       /* Storlek på rubrik 14px, fet stil utökar rad avstånd för att få luft kring rubriker och fontfamilj */
+}                                                                /* Samma sak med h3 nedan*/
+
+h3 {
+	font: bold 0.875/1.0em Verdana, Tahoma, sans-serif;    /* 18px */
+}
+
+p {
+	font-size: 0.756em;             /* 10 px*/
+	line-height: 1.4em;                                    /* Ökar radavstånd samt en margin i top och botten för att få luft till nytt stycke*/
+	/*margin: 0.625em 0 1.25em  /* 10px 0 20px*/
+	word-spacing: 2px;
+}
+
+a:link { 
+	color: #707089;       /* Sätter mörklila färg på länkar, jag valde en mörkare än pipetten gav för konrasten blev för dålig*/
+}
+
+a:visited{                /* Sätter lila färg på besökta länkar*/
+	color: #B667B8;
+}
+
+a:focus { 
+	border: 1px dotted #707089;  /* Sätter en mörklila prickad ram kring länkar när man klickar på dem och när man tabbar runt*/
+}
+/* ----------------------Här börjar specifika värden på id och class, samma upplägg i layout nedan  */
+
+#main h1, h2, h3{
+	letter-spacing: 1px;
+	margin: 10px 20px 200px;
+}
+
+#main p{
+	margin: 0 20px 18px;
+}
+
+#courseplan h1, h2, h3{
+	margin: 40px 20px 20px;
+}
+
+
+#motto{
+	color: #974C51;      /* Textfärg och kursivt*/
+	font-size: 0.756em;
+	font-style:italic;
+}
+
+#menu a{
+	font-size: 0.756em;
+	text-decoration: none; /* Tar bort linjen under länkar i menu , ---menu gäller även nedan*/
+}
+
+#menu a:link { 
+	color: #000000;       /* Sätter svart färg på länkar i menu*/
+}
+#menu a:visited {
+	color: #000000;   /* Såtter svart färg på besökta länkar i menu*/
+}
+
+#menu a:hover {
+	background-color: #E2E3E4; /*Sätter en mörkare grå bakgrund när man horar över länk  ---slut på menu kommentar*/
+}
+.active {
+	font-weight: bold;   /* Sätter fet stil på aktiv länk*/
+}
+
+#footer{
+	text-align: center;  /* Centrerar texten i footer*/
+	color: white;       /* sätter vit textfärg i footer*/
+}
+
+/* Layout-------------------------------------------------------------------------------*/
+body{
+	background-color: #63A4C4;                     /*Bakgrundsbild repeteras och en blåfärg ifall bilden inte skulle funka*/
+	background-image: url(../bilder/vatten.png);   /* Alla färger hämtade från skärmdumpar i Gimp med pipettverktyg */
+	background-repeat: repeat;                     /* Alla mått är också hämtade från skärmdumparna */
+	
+}
+
+#content{
+	background-color: #EFEC77;                     /* Gul bakgrund*/                    
+	min-width: 31.25em;                              /* Sätter max 904px- och min-bredd 500px på content i vilken allt visas*/
+	max-width: 56.5em; 
+	margin: 0 auto;                             /* Sätter content i mitten av webbläsaren och tar bort marginal i topp och botten*/
+	padding:5px 0;                                /*5px padding i top och botten*/
+}
+
+#header {
+	margin:0 0.625em 0.625em;  /* motsvarar 0 top, sidor 10px, botten 10px*/
+	padding: 0.625em;          /* 10px*/
+	border: 6px solid #D6CCDB; /* Sätter en grå ram runt header*/
+	position: relative;        /* Anger header som relativ för att kunna relatera motto till rätt position*/
+}
+
+#motto{
+	position:absolute; /* Poitionerning från nedre högra hörnet i header*/
+    right: 26px;
+    bottom: 9px;
+	width: 130px;  /* 130px*/
+    height: 30px;  /* 30px*/
+}
+
+#menu {
+	background-color: #EEE;   /* Ljusgrå bakgrund med svart ram till menyraden*/
+	border:1px solid #000;
+	padding: 0 10px;          /* ingen padding i topp och botten 10px padding höger och vänster*/
+}
+
+#menu li{
+	padding: 0 13px;          /* Ingen padding topp och botten 13px höger vänster för navigerings"knapparna"*/ 
+	display: inline-block;    /* Lägger navigering vågrätt, kan dock bli problem i IE7 har jag förstått */
+}
+
+#menu a{
+	padding: 2px 0;			  /* */
+	display: block;
+}
+
+#main{
+	width: 35.875em;  /* 574px */
+	margin: 0 5px 10px 10px; /** top 0, höger 5px, botten 10px, vänster 5px*/
+	padding-top: 1.25em;
+	background: url(../bilder/bakgrundlogo.png) no-repeat;
+	background-color: #E2E3E4;
+	float: left;
+}
+
+#courseplanlogo{
+	width: 100px;
+	height: 103px;
+	margin: 20px 15px;
+	background: url(../bilder/fisklogo.png) no-repeat;
+	background-color: #E2E3E4;
+	float: right;
+}
+
+#courseplan{
+	width: 18.688em; /* 299px */
+	margin: 0 10px 10px 5px; /* top 0, höger 10px, botten 10px vänster 5px*/
+	/*padding: 1.25em;*/
+	background-color: #E2E3E4;
+	float: right;
+}
+
+#contact{
+	margin: 0 10px 10px;
+	margin-right:10px;
+	padding: 20px;
+	background-color: #E2E3E4;
+}
+
+.assignment{
+	width: 574px;
+	margin: 0 10px 10px;
+	margin-right:5px;
+	padding: 20px;
+	background-color: #E2E3E4;
+	float: left;
+}
+
+.external {
+	background: url(../bilder/smallglobe.png) no-repeat; /* sätter jordgloben vid extern länk och framför med padding*/
+	padding: 0 20px;
+	
+}
+
+#footer{
+	padding: 20px;
+	background-color: #675C48;
+	clear: both;
+	margin:10px;
+}
